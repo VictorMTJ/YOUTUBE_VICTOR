@@ -49,6 +49,16 @@ i{
 p,a{
     font-size: 0.9rem;
 }
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: transparent;
+    border-radius: 5px;
+}
+.sidebar::-webkit-scrollbar-thumb{
+    background-color: #717171;
+}
 .logo-img{
     position: relative;
     height: 25px;
@@ -150,6 +160,7 @@ p,a{
     grid-area: sidebar;
     background-color: #121212;
     padding-top: 10px;
+    overflow-y: scroll;
 }
 .sidebar-items{
     display: flex;
@@ -170,4 +181,33 @@ p,a{
 }
 .content{
     grid-area: content;
+}
+.chips-wapper{
+    max-width: calc(100vw - 240px);
+    overflow-x: scroll;
+    background-color: #181818;
+    display: flex;
+    padding-left: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chips{
+    margin: 12px 6px;
+    background-color: #373737;
+    padding: 6px 12px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 16px;
+    white-space: nowrap;
+    transition: 0.5s;
+}
+.chips:hover{
+    background-color: #717171;
+}
+.chips-wapper::-webkit-scrollbar{
+    height: 6px;
+}
+.chips-wapper:hover::-webkit-scrollbar-thumb{
+    background-color: #717171;
 }
